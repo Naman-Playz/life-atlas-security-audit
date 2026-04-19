@@ -348,3 +348,12 @@ To verify these findings and check the LPI Sandbox security posture, I have incl
 1. [cite_start]**Ensure the LPI Sandbox is built:** Run `npm run build` in the project root.
 2. [cite_start]**Run the automated security audit:** Execute `python audit_tools.py`.
 3. [cite_start]**Review the Audit Summary:** Check the formatted output in your terminal for pass/fail security checks, input boundary tests, and easter egg verifications.
+
+
+## 6. Future Roadmap
+
+To move beyond manual auditing and align with the SMILE principle of "Continuous Optimization," I have planned the following enhancements for this security suite:
+
+* **Automated Security Pipelines:** Integration of a Static Application Security Testing (SAST) tool into the CI/CD pipeline to catch OS Command Injection and other injection-class vulnerabilities automatically during the development phase.
+* **Dynamic Fuzzing Expansion:** Expanding `audit_tools.py` to include more comprehensive stateful fuzzing of the MCP transport layer, specifically targeting potential memory leaks during malformed JSON-RPC handshakes.
+* **Hardening the Stdio Transport:** Proposing a middleware layer for the LPI Sandbox to handle protocol-level timeouts, preventing the "silent hang" issues identified in the Level 2 audit.
