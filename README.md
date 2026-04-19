@@ -1,4 +1,4 @@
-# Level 3  Security Audit Report (Track E)
+# Level-3  Security Audit Report (Track E)
 
 **Contributor:** Naman Anand  
 **Target:** `examples/vulnerable-api.py`
@@ -340,4 +340,11 @@ Beyond the vulnerable example API, I also spent some time looking at the actual 
 **The bigger picture:** I think the deliberate contrast between these two codebases is a really effective teaching tool. The vulnerable API breaks almost every rule in the OWASP Top 10, while the MCP server shows what "secure by default" actually looks like in practice. It reinforces why the SMILE methodology's emphasis on architecture-first thinking matters  security is not something you bolt on at the end, it has to be baked into the design from the start.
 
 
+## 5. Usage: Automated Audit Script
 
+To verify these findings and check the LPI Sandbox security posture, I have included a Python-based automated audit tool (`audit_tools.py`). 
+
+### **How to Run the Audit Tool**
+1. [cite_start]**Ensure the LPI Sandbox is built:** Run `npm run build` in the project root.
+2. [cite_start]**Run the automated security audit:** Execute `python audit_tools.py`.
+3. [cite_start]**Review the Audit Summary:** Check the formatted output in your terminal for pass/fail security checks, input boundary tests, and easter egg verifications.
